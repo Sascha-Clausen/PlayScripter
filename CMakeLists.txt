@@ -1,0 +1,7 @@
+cmake_minimum_required(VERSION 2.8)
+project( PlayScripter )
+set (CMAKE_CXX_FLAGS "-std=gnu++11 ${CMAKE_CXX_FLAGS}")
+set(CMAKE_PREFIX_PATH ${CMAKE_PREFIX_PATH} /home/sascha/opencv-git/opencv/build)
+find_package( OpenCV REQUIRED )
+add_executable( playScripter playScripter.cpp )
+target_link_libraries( playScripter ${OpenCV_LIBS} )
